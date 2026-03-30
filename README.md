@@ -64,9 +64,9 @@ That's the skill.
 
 Looks good on everything — desktop, tablet, mobile. The layout adapts so the OS feels native regardless of screen size.
 
-![Desktop](./previews/pc.png)
-![Tablet](./previews/tablet.png)
-![Mobile](./previews/mobile.png)
+![Desktop](previews/desktop.png)
+![Tablet](previews/tablet.png)
+![Mobile](previews/mobile.png)
 
 ---
 
