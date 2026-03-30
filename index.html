@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaOS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <input type="checkbox" id="start-toggle" />
+
+    <div class="desktop">
+      <div class="bubbles" aria-hidden="true">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+
+      <div class="icon-grid" role="list">
+        <a
+          href="#files-window"
+          class="icon-item"
+          role="listitem"
+          aria-label="Files"
+        >
+          <div class="icon-glyph">🗂️</div>
+          <span class="icon-label">Files</span>
+        </a>
+
+        <a
+          href="#browser-window"
+          class="icon-item"
+          role="listitem"
+          aria-label="Browser"
+        >
+          <div class="icon-glyph">🌐</div>
+          <span class="icon-label">Browser</span>
+        </a>
+
+        <a
+          href="#terminal-window"
+          class="icon-item"
+          role="listitem"
+          aria-label="Terminal"
+        >
+          <div class="icon-glyph">💻</div>
+          <span class="icon-label">Terminal</span>
+        </a>
+
+        <a
+          href="#music-window"
+          class="icon-item"
+          role="listitem"
+          aria-label="Music"
+        >
+          <div class="icon-glyph">🎵</div>
+          <span class="icon-label">Music</span>
+        </a>
+
+        <a
+          href="#camera-window"
+          class="icon-item"
+          role="listitem"
+          aria-label="Camera"
+        >
+          <div class="icon-glyph">📷</div>
+          <span class="icon-label">Camera</span>
+        </a>
+
+        <a
+          href="#messages-window"
+          class="icon-item"
+          role="listitem"
+          aria-label="Messages"
+        >
+          <div class="icon-glyph">💬</div>
+          <span class="icon-label">Messages</span>
+        </a>
+
+        <a
+          href="#maps-window"
+          class="icon-item"
+          role="listitem"
+          aria-label="Maps"
+        >
+          <div class="icon-glyph">🗺️</div>
+          <span class="icon-label">Maps</span>
+        </a>
+
+        <a
+          href="#calendar-window"
+          class="icon-item"
+          role="listitem"
+          aria-label="Calendar"
+        >
+          <div class="icon-glyph">📅</div>
+          <span class="icon-label">Calendar</span>
+        </a>
+
+        <a
+          href="#settings-window"
+          class="icon-item"
+          role="listitem"
+          aria-label="Settings"
+        >
+          <div class="icon-glyph">⚙️</div>
+          <span class="icon-label">Settings</span>
+        </a>
+
+        <a
+          href="#notes-window"
+          class="icon-item"
+          role="listitem"
+          aria-label="Notes"
+        >
+          <div class="icon-glyph">📝</div>
+          <span class="icon-label">Notes</span>
+        </a>
+
+        <a
+          href="#code-window"
+          class="icon-item"
+          role="listitem"
+          aria-label="Code"
+        >
+          <div class="icon-glyph">🧬</div>
+          <span class="icon-label">Code</span>
+        </a>
+
+        <a
+          href="#cloud-window"
+          class="icon-item"
+          role="listitem"
+          aria-label="Cloud"
+        >
+          <div class="icon-glyph">☁️</div>
+          <span class="icon-label">Cloud</span>
+        </a>
+      </div>
+
+      <div class="corner-widget glass" aria-label="Weather widget">
+        <div class="widget-label">Aqua City · Live</div>
+        <div class="widget-temp">22°</div>
+        <div class="widget-desc">🌊 Ocean Breeze</div>
+        <div class="widget-divider"></div>
+        <div class="widget-stats">
+          <div class="stat-item">
+            <div class="stat-val">68%</div>
+            <div class="stat-key">HUMID</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">14</div>
+            <div class="stat-key">KM/H</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">1013</div>
+            <div class="stat-key">HPA</div>
+          </div>
+        </div>
+        <div class="widget-divider"></div>
+        <div class="widget-label" style="margin-bottom: 4px">SYSTEM LOAD</div>
+        <div class="prog-bar-track">
+          <div class="prog-bar-fill" style="width: 42%"></div>
+        </div>
+        <div class="widget-label" style="margin-top: 8px; margin-bottom: 4px">
+          MEMORY
+        </div>
+        <div class="prog-bar-track">
+          <div class="prog-bar-fill" style="width: 67%"></div>
+        </div>
+      </div>
+
+      <div
+        id="files-window"
+        class="fake-window glass"
+        role="dialog"
+        aria-label="Files Window"
+      >
+        <div class="window-titlebar">
+          <a href="#" class="win-btn close" aria-label="Close"></a>
+          <div class="win-btn min" aria-label="Minimize"></div>
+          <div class="win-btn max" aria-label="Maximize"></div>
+          <span class="window-title">🗂️ Files — Home</span>
+        </div>
+        <div class="window-body">
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 12px;
+            "
+          >
+            <a href="#notes-window" class="icon-item" style="padding: 12px 6px"
+              ><div class="icon-glyph" style="font-size: 1.6rem">📁</div>
+              <span class="icon-label">Documents</span></a
+            >
+            <a href="#camera-window" class="icon-item" style="padding: 12px 6px"
+              ><div class="icon-glyph" style="font-size: 1.6rem">🖼️</div>
+              <span class="icon-label">Pictures</span></a
+            >
+            <a href="#music-window" class="icon-item" style="padding: 12px 6px"
+              ><div class="icon-glyph" style="font-size: 1.6rem">🎵</div>
+              <span class="icon-label">Music</span></a
+            >
+            <a
+              href="#browser-window"
+              class="icon-item"
+              style="padding: 12px 6px"
+              ><div class="icon-glyph" style="font-size: 1.6rem">🎬</div>
+              <span class="icon-label">Videos</span></a
+            >
+            <a href="#cloud-window" class="icon-item" style="padding: 12px 6px"
+              ><div class="icon-glyph" style="font-size: 1.6rem">💾</div>
+              <span class="icon-label">Downloads</span></a
+            >
+            <div class="icon-item" style="padding: 12px 6px">
+              <div class="icon-glyph" style="font-size: 1.6rem">🗑️</div>
+              <span class="icon-label">Trash</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="notes-window"
+        class="fake-window glass"
+        role="dialog"
+        aria-label="Notes Window"
+        style="width: min(520px, 92vw)"
+      >
+        <div class="window-titlebar">
+          <a href="#" class="win-btn close" aria-label="Close"></a>
+          <div class="win-btn min" aria-label="Minimize"></div>
+          <div class="win-btn max" aria-label="Maximize"></div>
+          <span class="window-title">📝 Notes</span>
+        </div>
+        <div class="window-body" style="padding: 0">
+          <textarea
+            class="notes-textarea"
+            placeholder="Start typing your note…&#10;&#10;This is AquaOS Notes — pure CSS window, real textarea."
+          ></textarea>
+        </div>
+      </div>
+
+      <div
+        id="settings-window"
+        class="fake-window glass"
+        role="dialog"
+        aria-label="Settings Window"
+        style="width: min(480px, 92vw)"
+      >
+        <div class="window-titlebar">
+          <a href="#" class="win-btn close" aria-label="Close"></a>
+          <div class="win-btn min"></div>
+          <div class="win-btn max"></div>
+          <span class="window-title">⚙️ Settings</span>
+        </div>
+        <div class="window-body">
+          <div class="settings-section">
+            <div class="settings-section-title">Appearance</div>
+            <div class="settings-row">
+              <div class="settings-row-left">
+                <div class="settings-row-label">Dark Mode</div>
+                <div class="settings-row-sub">Always on — it's an ocean</div>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" checked />
+                <span class="toggle-track"
+                  ><span class="toggle-thumb"></span
+                ></span>
+              </label>
+            </div>
+            <div class="settings-row">
+              <div class="settings-row-left">
+                <div class="settings-row-label">Bubble Animations</div>
+                <div class="settings-row-sub">Floating background bubbles</div>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" checked />
+                <span class="toggle-track"
+                  ><span class="toggle-thumb"></span
+                ></span>
+              </label>
+            </div>
+            <div class="settings-row">
+              <div class="settings-row-left">
+                <div class="settings-row-label">Glassmorphism Intensity</div>
+                <div class="settings-row-sub">Blur & transparency level</div>
+              </div>
+              <input
+                type="range"
+                class="settings-slider"
+                min="1"
+                max="5"
+                value="3"
+              />
+            </div>
+          </div>
+
+          <div class="settings-divider"></div>
+
+          <div class="settings-section">
+            <div class="settings-section-title">System</div>
+            <div class="settings-row">
+              <div class="settings-row-left">
+                <div class="settings-row-label">Notifications</div>
+                <div class="settings-row-sub">App alerts & badges</div>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" checked />
+                <span class="toggle-track"
+                  ><span class="toggle-thumb"></span
+                ></span>
+              </label>
+            </div>
+            <div class="settings-row">
+              <div class="settings-row-left">
+                <div class="settings-row-label">Scanline Overlay</div>
+                <div class="settings-row-sub">Subtle CRT effect</div>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" />
+                <span class="toggle-track"
+                  ><span class="toggle-thumb"></span
+                ></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="settings-divider"></div>
+
+          <div class="settings-section">
+            <div class="settings-section-title">About AquaOS</div>
+            <div class="settings-about">
+              <span class="settings-about-val">AquaOS</span> v1.0.0 · Built with
+              HTML + CSS only<br />
+              <span style="color: var(--cyan)">Pixel Clash 2026</span> · Deep
+              Ocean Edition
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="calendar-window"
+        class="fake-window glass"
+        role="dialog"
+        aria-label="Calendar Window"
+        style="width: min(400px, 92vw)"
+      >
+        <div class="window-titlebar">
+          <a href="#" class="win-btn close" aria-label="Close"></a>
+          <div class="win-btn min"></div>
+          <div class="win-btn max"></div>
+          <span class="window-title">📅 Calendar — March 2026</span>
+        </div>
+        <div class="window-body">
+          <div class="cal-grid">
+            <div class="cal-day-hdr">Sun</div>
+            <div class="cal-day-hdr">Mon</div>
+            <div class="cal-day-hdr">Tue</div>
+            <div class="cal-day-hdr">Wed</div>
+            <div class="cal-day-hdr">Thu</div>
+            <div class="cal-day-hdr">Fri</div>
+            <div class="cal-day-hdr">Sat</div>
+
+            <div class="cal-day">1</div>
+            <div class="cal-day">2</div>
+            <div class="cal-day">3</div>
+            <div class="cal-day">4</div>
+            <div class="cal-day">5</div>
+            <div class="cal-day">6</div>
+            <div class="cal-day">7</div>
+
+            <div class="cal-day">8</div>
+            <div class="cal-day">9</div>
+            <div class="cal-day">10</div>
+            <div class="cal-day">11</div>
+            <div class="cal-day">12</div>
+            <div class="cal-day">13</div>
+            <div class="cal-day">14</div>
+
+            <div class="cal-day">15</div>
+            <div class="cal-day">16</div>
+            <div class="cal-day">17</div>
+            <div class="cal-day">18</div>
+            <div class="cal-day">19</div>
+            <div class="cal-day">20</div>
+            <div class="cal-day">21</div>
+
+            <div class="cal-day">22</div>
+            <div class="cal-day">23</div>
+            <div class="cal-day">24</div>
+            <div class="cal-day">25</div>
+            <div class="cal-day">26</div>
+            <div class="cal-day">27</div>
+            <div class="cal-day">28</div>
+
+            <div class="cal-day">29</div>
+            <div class="cal-day cal-today">30</div>
+            <div class="cal-day">31</div>
+            <div class="cal-day cal-empty"></div>
+            <div class="cal-day cal-empty"></div>
+            <div class="cal-day cal-empty"></div>
+            <div class="cal-day cal-empty"></div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="browser-window"
+        class="fake-window glass"
+        role="dialog"
+        aria-label="Browser Window"
+        style="width: min(580px, 94vw)"
+      >
+        <div class="window-titlebar">
+          <a href="#" class="win-btn close" aria-label="Close"></a>
+          <div class="win-btn min"></div>
+          <div class="win-btn max"></div>
+          <span class="window-title">🌐 AquaBrowser</span>
+        </div>
+        <div class="browser-urlbar">
+          <span class="browser-lock">🔒</span>
+          <input
+            type="text"
+            class="browser-input"
+            value="https://aquaos.local/home"
+            spellcheck="false"
+            autocomplete="off"
+          />
+          <span class="browser-go">↵</span>
+        </div>
+        <div class="browser-tabs">
+          <div class="browser-tab browser-tab-active">🏠 New Tab</div>
+          <div class="browser-tab">🌊 Ocean</div>
+          <div class="browser-tab">📡 Docs</div>
+          <div class="browser-tab-add">＋</div>
+        </div>
+        <div class="browser-body">
+          <div class="browser-hero">
+            <div class="browser-hero-icon">🪸</div>
+            <div class="browser-hero-title">AquaOS Browser</div>
+            <div class="browser-hero-sub">Type a URL above and press Enter</div>
+          </div>
+          <div class="browser-bookmarks">
+            <div class="browser-bookmark">📁 Files</div>
+            <div class="browser-bookmark">📝 Notes</div>
+            <div class="browser-bookmark">⚙️ Settings</div>
+            <div class="browser-bookmark">🌊 Aqua Web</div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="terminal-window"
+        class="fake-window glass"
+        role="dialog"
+        aria-label="Terminal Window"
+        style="width: min(560px, 94vw)"
+      >
+        <div class="window-titlebar">
+          <a href="#" class="win-btn close" aria-label="Close"></a>
+          <div class="win-btn min"></div>
+          <div class="win-btn max"></div>
+          <span class="window-title">💻 AquaShell — bash</span>
+        </div>
+        <div class="terminal-body">
+          <pre class="terminal-output">
+AquaOS v1.0.0 — Deep Ocean Edition
+Built with HTML + CSS · No JS
+────────────────────────────────────
+aqua@aquaos:~$ ls
+  📁 Documents   📁 Downloads   📁 Pictures
+  📁 Music       📁 Videos      🗑️  Trash
+aqua@aquaos:~$ uname -a
+  AquaOS 1.0.0 css-kernel #1 SMP HTML5
+aqua@aquaos:~$ whoami
+  aqua-user
+aqua@aquaos:~$ _</pre
+          >
+          <div class="terminal-input-row">
+            <span class="terminal-prompt">aqua@aquaos:~$</span>
+            <textarea
+              class="terminal-input"
+              rows="1"
+              spellcheck="false"
+              autocomplete="off"
+              autocorrect="off"
+              placeholder="type a command…"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="music-window"
+        class="fake-window glass"
+        role="dialog"
+        aria-label="Music Window"
+        style="width: min(420px, 92vw)"
+      >
+        <div class="window-titlebar">
+          <a href="#" class="win-btn close" aria-label="Close"></a>
+          <div class="win-btn min"></div>
+          <div class="win-btn max"></div>
+          <span class="window-title">🎵 AquaTunes</span>
+        </div>
+        <div class="window-body">
+          <div class="music-hero">
+            <div class="music-art">
+              <div class="music-art-inner">🌊</div>
+              <div class="music-art-ring"></div>
+            </div>
+            <div class="music-track-info">
+              <div class="music-track-name">Ocean Drift</div>
+              <div class="music-track-artist">The Deep Current</div>
+            </div>
+          </div>
+
+          <div class="music-progress-wrap">
+            <span class="music-time">1:24</span>
+            <div class="music-progress-track">
+              <div class="music-progress-fill" style="width: 38%"></div>
+              <div class="music-progress-thumb" style="left: 38%"></div>
+            </div>
+            <span class="music-time">3:47</span>
+          </div>
+
+          <div class="music-controls">
+            <div class="music-btn">⏮</div>
+            <div class="music-btn music-btn-play">⏸</div>
+            <div class="music-btn">⏭</div>
+          </div>
+
+          <div class="music-divider"></div>
+          <div class="music-playlist">
+            <div class="music-pl-item music-pl-active">
+              <span class="music-pl-icon">▶</span>
+              <span class="music-pl-name">Ocean Drift</span>
+              <span class="music-pl-dur">3:47</span>
+            </div>
+            <div class="music-pl-item">
+              <span class="music-pl-icon">🎵</span>
+              <span class="music-pl-name">Abyssal Calm</span>
+              <span class="music-pl-dur">4:12</span>
+            </div>
+            <div class="music-pl-item">
+              <span class="music-pl-icon">🎵</span>
+              <span class="music-pl-name">Coral Lullaby</span>
+              <span class="music-pl-dur">2:58</span>
+            </div>
+            <div class="music-pl-item">
+              <span class="music-pl-icon">🎵</span>
+              <span class="music-pl-name">Bioluminescent</span>
+              <span class="music-pl-dur">5:03</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="camera-window"
+        class="fake-window glass"
+        role="dialog"
+        aria-label="Camera Window"
+        style="width: min(420px, 92vw)"
+      >
+        <div class="window-titlebar">
+          <a href="#" class="win-btn close" aria-label="Close"></a>
+          <div class="win-btn min"></div>
+          <div class="win-btn max"></div>
+          <span class="window-title">📷 AquaCam</span>
+        </div>
+        <div class="window-body" style="padding: 0">
+          <div class="camera-viewfinder">
+            <div class="cam-corner cam-tl"></div>
+            <div class="cam-corner cam-tr"></div>
+            <div class="cam-corner cam-bl"></div>
+            <div class="cam-corner cam-br"></div>
+            <div class="cam-sweep"></div>
+            <div class="cam-crosshair"></div>
+            <div class="cam-label">LIVE · REC ●</div>
+            <div class="cam-grid-h"></div>
+            <div class="cam-grid-v"></div>
+          </div>
+          <div class="camera-controls">
+            <div class="cam-mode cam-mode-active">📷 Photo</div>
+            <div class="cam-mode">🎬 Video</div>
+            <div class="cam-mode">🔬 Macro</div>
+            <div class="cam-shutter"></div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="maps-window"
+        class="fake-window glass"
+        role="dialog"
+        aria-label="Maps Window"
+        style="width: min(500px, 94vw)"
+      >
+        <div class="window-titlebar">
+          <a href="#" class="win-btn close" aria-label="Close"></a>
+          <div class="win-btn min"></div>
+          <div class="win-btn max"></div>
+          <span class="window-title">🗺️ AquaMaps</span>
+        </div>
+        <div class="browser-urlbar">
+          <span class="browser-lock">🔍</span>
+          <input
+            type="text"
+            class="browser-input"
+            placeholder="Search a location…"
+            autocomplete="off"
+          />
+        </div>
+        <div
+          class="window-body"
+          style="padding: 0; overflow: hidden; border-radius: 0 0 20px 20px"
+        >
+          <div class="map-canvas">
+            <div class="map-land map-land-1"></div>
+            <div class="map-land map-land-2"></div>
+            <div class="map-land map-land-3"></div>
+            <div class="map-gridlines"></div>
+            <div class="map-road map-road-h1"></div>
+            <div class="map-road map-road-h2"></div>
+            <div class="map-road map-road-v1"></div>
+            <div class="map-road map-road-v2"></div>
+            <div class="map-pin">
+              <div class="map-pin-dot"></div>
+              <div class="map-pin-pulse"></div>
+              <div class="map-pin-label">📍 You are here</div>
+            </div>
+            <div class="map-compass">N</div>
+            <div class="map-scale">
+              <div class="map-scale-bar"></div>
+              <span>500m</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="messages-window"
+        class="fake-window glass"
+        role="dialog"
+        aria-label="Messages Window"
+        style="width: min(460px, 94vw)"
+      >
+        <div class="window-titlebar">
+          <a href="#" class="win-btn close" aria-label="Close"></a>
+          <div class="win-btn min"></div>
+          <div class="win-btn max"></div>
+          <span class="window-title">💬 Messages</span>
+        </div>
+        <div class="msg-layout">
+          <div class="msg-sidebar">
+            <div class="msg-search">
+              <input
+                type="text"
+                class="msg-search-input"
+                placeholder="🔍  Search…"
+                autocomplete="off"
+              />
+            </div>
+            <div class="msg-conv msg-conv-active">
+              <div
+                class="msg-avatar"
+                style="background: linear-gradient(135deg, #0ea5e9, #22d3ee)"
+              >
+                🐠
+              </div>
+              <div class="msg-conv-info">
+                <div class="msg-conv-name">Coral</div>
+                <div class="msg-conv-preview">See you at the reef! 🪸</div>
+              </div>
+              <div class="msg-conv-meta">
+                <div class="msg-conv-time">now</div>
+                <div class="msg-unread">3</div>
+              </div>
+            </div>
+            <div class="msg-conv">
+              <div
+                class="msg-avatar"
+                style="background: linear-gradient(135deg, #6366f1, #8b5cf6)"
+              >
+                🐙
+              </div>
+              <div class="msg-conv-info">
+                <div class="msg-conv-name">Octo</div>
+                <div class="msg-conv-preview">
+                  Did you check the kelp forest?
+                </div>
+              </div>
+              <div class="msg-conv-meta">
+                <div class="msg-conv-time">2m</div>
+              </div>
+            </div>
+            <div class="msg-conv">
+              <div
+                class="msg-avatar"
+                style="background: linear-gradient(135deg, #f59e0b, #ef4444)"
+              >
+                🦀
+              </div>
+              <div class="msg-conv-info">
+                <div class="msg-conv-name">Crabby</div>
+                <div class="msg-conv-preview">The tide's coming in fast</div>
+              </div>
+              <div class="msg-conv-meta">
+                <div class="msg-conv-time">1h</div>
+              </div>
+            </div>
+            <div class="msg-conv">
+              <div
+                class="msg-avatar"
+                style="background: linear-gradient(135deg, #10b981, #22d3ee)"
+              >
+                🐢
+              </div>
+              <div class="msg-conv-info">
+                <div class="msg-conv-name">Shelby</div>
+                <div class="msg-conv-preview">Slow and steady 🐢</div>
+              </div>
+              <div class="msg-conv-meta">
+                <div class="msg-conv-time">3h</div>
+              </div>
+            </div>
+          </div>
+          <div class="msg-chat">
+            <div class="msg-chat-header">
+              <div
+                class="msg-avatar"
+                style="
+                  background: linear-gradient(135deg, #0ea5e9, #22d3ee);
+                  width: 32px;
+                  height: 32px;
+                  font-size: 0.9rem;
+                "
+              >
+                🐠
+              </div>
+              <div>
+                <div class="msg-conv-name" style="font-size: 0.75rem">
+                  Coral
+                </div>
+                <div class="msg-online">● online</div>
+              </div>
+            </div>
+            <div class="msg-bubbles">
+              <div class="msg-bubble msg-bubble-in">
+                Hey! Ready for the dive? 🌊
+              </div>
+              <div class="msg-bubble msg-bubble-out">
+                Almost! Just checking the gear 🤿
+              </div>
+              <div class="msg-bubble msg-bubble-in">
+                See you at the reef! 🪸
+              </div>
+            </div>
+            <div class="msg-input-row">
+              <textarea
+                class="msg-input"
+                rows="1"
+                placeholder="Message Coral…"
+                autocomplete="off"
+                spellcheck="false"
+              ></textarea>
+              <div class="msg-send">↑</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="code-window"
+        class="fake-window glass"
+        role="dialog"
+        aria-label="Code Window"
+        style="width: min(580px, 94vw)"
+      >
+        <div class="window-titlebar">
+          <a href="#" class="win-btn close" aria-label="Close"></a>
+          <div class="win-btn min"></div>
+          <div class="win-btn max"></div>
+          <span class="window-title">🧬 AquaCode — index.html</span>
+        </div>
+        <div class="code-tabs">
+          <div class="code-tab code-tab-active">📄 index.html</div>
+          <div class="code-tab">🎨 styles.css</div>
+          <div class="code-tab">📦 README.md</div>
+        </div>
+        <div class="code-body">
+          <div class="code-gutter">
+            <span>1</span><span>2</span><span>3</span><span>4</span
+            ><span>5</span> <span>6</span><span>7</span><span>8</span
+            ><span>9</span><span>10</span> <span>11</span><span>12</span
+            ><span>13</span><span>14</span><span>15</span>
+          </div>
+          <textarea
+            class="code-editor"
+            spellcheck="false"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+          >
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;AquaOS&lt;/title&gt;
+  &lt;link rel="stylesheet" href="styles.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div class="desktop"&gt;
+    &lt;div class="bubbles"&gt;&lt;/div&gt;
+    &lt;div class="icon-grid"&gt;
+      &lt;!-- icons here --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</textarea
+          >
+        </div>
+        <div class="code-statusbar">
+          <span>🟢 HTML</span>
+          <span>UTF-8</span>
+          <span>Ln 1, Col 1</span>
+          <span style="color: var(--cyan)">AquaCode v1.0</span>
+        </div>
+      </div>
+
+      <div
+        id="cloud-window"
+        class="fake-window glass"
+        role="dialog"
+        aria-label="Cloud Window"
+        style="width: min(460px, 94vw)"
+      >
+        <div class="window-titlebar">
+          <a href="#" class="win-btn close" aria-label="Close"></a>
+          <div class="win-btn min"></div>
+          <div class="win-btn max"></div>
+          <span class="window-title">☁️ AquaCloud</span>
+        </div>
+        <div class="window-body">
+          <div class="cloud-hero">
+            <div class="cloud-ring-wrap">
+              <svg class="cloud-ring-svg" viewBox="0 0 100 100">
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.06)"
+                  stroke-width="8"
+                />
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  fill="none"
+                  stroke="url(#cg)"
+                  stroke-width="8"
+                  stroke-dasharray="164 251"
+                  stroke-dashoffset="62"
+                  stroke-linecap="round"
+                />
+                <defs>
+                  <linearGradient id="cg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0ea5e9" />
+                    <stop offset="100%" stop-color="#22d3ee" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="cloud-ring-center">
+                <div class="cloud-ring-used">6.5</div>
+                <div class="cloud-ring-unit">GB used</div>
+              </div>
+            </div>
+            <div class="cloud-storage-info">
+              <div class="cloud-storage-label">AquaCloud Storage</div>
+              <div class="cloud-storage-total">6.5 GB of 15 GB used</div>
+              <div class="cloud-bar-track">
+                <div class="cloud-bar-fill" style="width: 43%"></div>
+              </div>
+              <div class="cloud-storage-sub">57% free · Synced just now</div>
+            </div>
+          </div>
+
+          <div class="cloud-divider"></div>
+
+          <div class="cloud-section-title">Recent Files</div>
+          <div class="cloud-files">
+            <div class="cloud-file">
+              <span class="cloud-file-icon">📄</span>
+              <div class="cloud-file-info">
+                <div class="cloud-file-name">aquaos_design.fig</div>
+                <div class="cloud-file-meta">2.1 MB · Modified today</div>
+              </div>
+              <span class="cloud-file-status">✓</span>
+            </div>
+            <div class="cloud-file">
+              <span class="cloud-file-icon">🖼️</span>
+              <div class="cloud-file-info">
+                <div class="cloud-file-name">wallpaper_ocean.png</div>
+                <div class="cloud-file-meta">4.8 MB · Modified yesterday</div>
+              </div>
+              <span class="cloud-file-status">✓</span>
+            </div>
+            <div class="cloud-file">
+              <span class="cloud-file-icon">📝</span>
+              <div class="cloud-file-info">
+                <div class="cloud-file-name">notes_backup.txt</div>
+                <div class="cloud-file-meta">12 KB · Syncing…</div>
+              </div>
+              <span class="cloud-file-status cloud-syncing">↻</span>
+            </div>
+            <div class="cloud-file">
+              <span class="cloud-file-icon">🎵</span>
+              <div class="cloud-file-info">
+                <div class="cloud-file-name">ocean_drift.mp3</div>
+                <div class="cloud-file-meta">8.3 MB · Modified 3 days ago</div>
+              </div>
+              <span class="cloud-file-status">✓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="start-menu glass" role="dialog" aria-label="Start Menu">
+      <div class="start-header">
+        <div class="start-avatar">🐬</div>
+        <div>
+          <div class="start-username">AQUA USER</div>
+          <div class="start-status">● Online · AquaOS 1.0</div>
+        </div>
+      </div>
+
+      <div class="start-apps">
+        <a href="#files-window" class="start-app-item"
+          ><span class="start-app-icon">🗂️</span
+          ><span class="start-app-label">Files</span></a
+        >
+        <a href="#browser-window" class="start-app-item"
+          ><span class="start-app-icon">🌐</span
+          ><span class="start-app-label">Browser</span></a
+        >
+        <a href="#terminal-window" class="start-app-item"
+          ><span class="start-app-icon">💻</span
+          ><span class="start-app-label">Terminal</span></a
+        >
+        <a href="#music-window" class="start-app-item"
+          ><span class="start-app-icon">🎵</span
+          ><span class="start-app-label">Music</span></a
+        >
+        <a href="#camera-window" class="start-app-item"
+          ><span class="start-app-icon">📷</span
+          ><span class="start-app-label">Camera</span></a
+        >
+        <a href="#settings-window" class="start-app-item"
+          ><span class="start-app-icon">⚙️</span
+          ><span class="start-app-label">Settings</span></a
+        >
+      </div>
+
+      <div class="start-divider"></div>
+
+      <div class="start-power-row">
+        <button class="power-btn sleep">💤 Sleep</button>
+        <button class="power-btn">⏻ Power</button>
+      </div>
+    </div>
+
+    <div class="taskbar glass" role="navigation" aria-label="Taskbar">
+      <label
+        for="start-toggle"
+        class="start-btn-label"
+        role="button"
+        aria-label="Toggle Start Menu"
+      >
+        <span class="start-btn-icon">🪸</span>
+        <span class="start-btn-text">START</span>
+      </label>
+
+      <div class="taskbar-dock" role="toolbar" aria-label="Dock">
+        <a href="#files-window" class="dock-icon active"
+          >🗂️<span class="tooltip">Files</span></a
+        >
+        <a href="#browser-window" class="dock-icon"
+          >🌐<span class="tooltip">Browser</span></a
+        >
+        <a href="#messages-window" class="dock-icon" style="position: relative"
+          >💬
+          <div class="badge">3</div>
+          <span class="tooltip">Messages</span></a
+        >
+        <a href="#music-window" class="dock-icon active"
+          >🎵<span class="tooltip">Music</span></a
+        >
+        <a href="#terminal-window" class="dock-icon"
+          >💻<span class="tooltip">Terminal</span></a
+        >
+        <a href="#camera-window" class="dock-icon"
+          >📷<span class="tooltip">Camera</span></a
+        >
+      </div>
+
+      <div class="system-tray">
+        <div class="tray-icons">
+          <span class="tray-icon" title="WiFi">📶</span>
+          <span class="tray-icon" title="Volume">🔊</span>
+          <span class="tray-icon" title="Battery">🔋</span>
+        </div>
+        <div class="clock">
+          <div class="clock-time">09:41</div>
+          <div class="clock-date">Mon, Mar 30</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+  </body>
+</html>
