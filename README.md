@@ -9,9 +9,11 @@ A fully functional desktop OS UI — built with nothing but HTML and CSS.
 **Live:** [poran-dip.github.io/aqua-os](https://poran-dip.github.io/aqua-os/)
 
 **Locally:**
+
 ```bash
 git clone https://github.com/poran-dip/aqua-os.git
 ```
+
 Then just open `index.html` in a browser. No server, no installs, no build step — it's literally one HTML file.
 
 ## What is this?
@@ -22,20 +24,20 @@ Every single element is interactive. Every app opens. Every window closes. No Ja
 
 ## Apps
 
-| App | What it does |
-|---|---|
-| 🗂️ Files | Folder grid, each folder links to a relevant app |
-| 🌐 Browser | URL bar you can type in, tabs, new tab page |
-| 💻 Terminal | Fake shell history in `<pre>`, live `<textarea>` input |
-| 🎵 Music | Spinning album art, progress bar, playlist |
-| 📷 Camera | Animated viewfinder with sweep line, rule-of-thirds grid, shutter button |
-| 💬 Messages | Chat bubble UI |
-| 🗺️ Maps | Fully CSS-drawn map, pulsing location pin, search input |
-| 📅 Calendar | March 2026 grid, today highlighted |
-| ⚙️ Settings | Working toggle switches, range slider |
-| 📝 Notes | Actual `<textarea>` — you can write in it |
-| 🧬 Code | Code editor UI |
-| ☁️ Cloud | Storage bar, recent files list |
+| App         | What it does                                                             |
+| ----------- | ------------------------------------------------------------------------ |
+| 🗂️ Files    | Folder grid, each folder links to a relevant app                         |
+| 🌐 Browser  | URL bar you can type in, tabs, new tab page                              |
+| 💻 Terminal | Fake shell history in `<pre>`, live `<textarea>` input                   |
+| 🎵 Music    | Spinning album art, progress bar, playlist                               |
+| 📷 Camera   | Animated viewfinder with sweep line, rule-of-thirds grid, shutter button |
+| 💬 Messages | Chat bubble UI                                                           |
+| 🗺️ Maps     | Fully CSS-drawn map, pulsing location pin, search input                  |
+| 📅 Calendar | March 2026 grid, today highlighted                                       |
+| ⚙️ Settings | Working toggle switches, range slider                                    |
+| 📝 Notes    | Actual `<textarea>` — you can write in it                                |
+| 🧬 Code     | Code editor UI                                                           |
+| ☁️ Cloud    | Storage bar, recent files list                                           |
 
 The taskbar dock, start menu, and Files app all cross-link to each other. The start menu opens and closes via the checkbox hack — same mechanism, zero JS.
 
@@ -70,4 +72,4 @@ Looks good on everything — desktop, tablet, mobile. The layout adapts so the O
 
 ---
 
-*AquaOS · Pixel Clash 2026 · Assam Engineering College*
+_AquaOS · Pixel Clash 2026 · Assam Engineering College_
